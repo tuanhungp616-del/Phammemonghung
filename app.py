@@ -242,3 +242,11 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     print("🚀 Quantum X V2 Server started - Thuật toán nâng cao + Delay 20s")
     app.run(host="0.0.0.0", port=port)
+@app.route("/")
+def home():
+    return send_file("index.html")
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
+    
