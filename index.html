@@ -13,21 +13,18 @@
     canvas#particles { position: fixed; top:0; left:0; width:100%; height:100%; z-index:1; opacity:0.4; pointer-events:none; }
 
     :root { --gold-light: #FBF5B7; --gold-mid: #D4AF37; --gold-dark: #AA771C; --bg-glass: rgba(15, 15, 15, 0.85); }
-    
     .glass-panel { background: var(--bg-glass); backdrop-filter: blur(20px); border: 1px solid rgba(212, 175, 55, 0.3); box-shadow: 0 15px 35px rgba(0,0,0,0.6), inset 0 0 15px rgba(212, 175, 55, 0.1); border-radius: 20px; }
     .container { max-width: 560px; margin: 0 auto; padding: 20px 16px; position: relative; z-index: 2; }
 
-    /* MÀN HÌNH ĐĂNG NHẬP LUXURY */
     #login-screen { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.95); z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
     .login-box { width: 100%; max-width: 380px; text-align: center; padding: 45px 25px; border-radius: 24px; }
     .login-box h2 { font-family: 'Playfair Display', serif; color: var(--gold-mid); font-size: 2.2rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
     .input-box { width: 100%; background: #050505; border: 1px solid var(--gold-dark); padding: 18px; border-radius: 12px; color: var(--gold-light); font-size: 1rem; text-align: center; outline: none; transition: 0.3s; margin-bottom: 20px; font-family: 'Orbitron', sans-serif; letter-spacing: 1px; }
     .input-box:focus { border-color: var(--gold-light); box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
 
-    .btn-gold { width: 100%; padding: 16px; border: none; border-radius: 12px; background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); color: #000; font-size: 1.1rem; font-weight: 800; cursor: pointer; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); transition: all 0.2s; text-transform: uppercase; letter-spacing: 1px; }
+    .btn-gold { width: 100%; padding: 16px; border: none; border-radius: 12px; background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); color: #000; font-size: 1.1rem; font-weight: 800; cursor: pointer; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); transition: all 0.2s; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;}
     .btn-gold:active { transform: scale(0.97); }
 
-    /* HEADER & TABS */
     .header { text-align: center; padding: 30px 20px; margin-bottom: 25px; }
     .header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: 2px; margin-bottom: 10px;}
     .badge { display: inline-block; background: #111; border: 1px solid var(--gold-mid); padding: 6px 20px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; color: var(--gold-light); letter-spacing: 1px; text-transform: uppercase; }
@@ -36,11 +33,9 @@
     .menu-item { flex: 1; text-align: center; padding: 14px 5px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; color: #888; }
     .menu-item.active { background: linear-gradient(135deg, #BF953F, #B38728); color: #000; font-weight: 800; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
 
-    /* COMPONENTS */
     .card { background: rgba(10, 10, 10, 0.9); border-radius: 20px; padding: 25px; margin-bottom: 20px; border: 1px solid rgba(212, 175, 55, 0.2); }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-    /* KẾT QUẢ MD5 */
     .result-item { background: #080808; border-radius: 15px; padding: 20px; margin-bottom: 16px; border-left: 4px solid var(--gold-mid); }
     .big-percent { font-family: 'Orbitron', sans-serif; font-size: 2.8rem; font-weight: 900; line-height: 1.2; color: var(--gold-light); text-shadow: 0 0 15px rgba(212, 175, 55, 0.4); margin-top: 5px;}
     .progress-bar-bg { height: 8px; background: #222; border-radius: 10px; overflow: hidden; margin: 12px 0; }
@@ -53,11 +48,10 @@
     .stat-number { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--gold-mid); margin-top: 4px;}
     .history-item { background: #0a0a0a; padding: 15px; border-radius: 12px; margin-bottom: 10px; font-size: 0.85rem; border-left: 2px solid var(--gold-mid); font-family: 'Share Tech Mono'; color: #ccc;}
 
-    /* AUTO SÀN OVERLAY */
-    #game-overlay { display: none; position: fixed; inset: 0; z-index: 2000; background: #000; animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    #game-overlay { display: none; position: fixed; inset: 0; z-index: 2000; background: #000; animation: popIn 0.3s; }
     @keyframes popIn { 0% { opacity: 0; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1); } }
     #game-frame { width: 100%; height: 100%; border: none; }
-    .close-game-btn { position: absolute; top: 40px; left: 15px; background: rgba(0,0,0,0.8); color: #ff3366; border: 1px solid #ff3366; padding: 10px 20px; border-radius: 12px; font-weight: 800; z-index: 2005; cursor:pointer; font-family: 'Montserrat'; }
+    .close-game-btn { position: absolute; top: 40px; left: 15px; background: rgba(0,0,0,0.8); color: #ff3366; border: 1px solid #ff3366; padding: 10px 20px; border-radius: 12px; font-weight: 800; z-index: 2005; cursor:pointer; }
     .drag-handle { width: 100%; text-align: center; color: var(--gold-dark); font-size: 20px; padding-bottom: 8px; cursor: grab; border-bottom: 1px solid rgba(212, 175, 55, 0.2); margin-bottom: 10px;}
     
     #bridge-detect-panel { position: absolute; top: 40px; right: 15px; width: 170px; background: var(--bg-glass); border: 1px solid var(--gold-mid); border-radius: 16px; padding: 15px; z-index: 2001; box-shadow: 0 10px 30px rgba(0,0,0,0.8); backdrop-filter: blur(10px);}
@@ -75,7 +69,6 @@
 </head>
 <body>
 <canvas id="particles"></canvas>
-  
 <div id="login-screen">
   <div class="login-box glass-panel">
     <h2>HƯNG DZKK</h2>
@@ -87,7 +80,7 @@
 </div>
 
 <div id="game-overlay">
-  <div style="width: 100%; background: #050505; color: var(--gold-mid); font-family: 'Orbitron'; font-size: 10px; padding: 8px; border-bottom: 1px solid var(--gold-dark); display: flex; letter-spacing: 1px;"><marquee scrollamount="5">V99 LUXURY EDITION | ENCRYPTED CONNECTION | BYPASSING FIREWALL...</marquee></div>
+  <div style="width: 100%; background: #050505; color: var(--gold-mid); font-family: 'Orbitron'; font-size: 10px; padding: 8px; border-bottom: 1px solid var(--gold-dark); display: flex; letter-spacing: 1px;"><marquee scrollamount="5">V99 LUXURY EDITION | MONTE CARLO SIMULATION V2 | DELAYING 20s...</marquee></div>
   <button class="close-game-btn" onclick="closeGame()"><i class="fas fa-times"></i></button>
   <iframe id="game-frame" src=""></iframe>
   
@@ -130,15 +123,13 @@
     <div class="card glass-panel">
       <input type="text" id="md5-input" class="input-box" placeholder="Insert 32-char MD5 Hash..." maxlength="32">
       <button id="predict-btn" class="btn-gold"><i class="fas fa-gem"></i> ANALYZE HASH</button>
-      <button id="auto-btn" class="btn-gold" style="background: #111; color: var(--gold-mid); border: 1px solid var(--gold-mid); box-shadow: none; margin-top: 12px;"><i class="fas fa-random"></i> RANDOM TEST</button>
+      <button id="auto-btn" class="btn-gold" style="background: #111; color: var(--gold-mid); border: 1px solid var(--gold-mid); box-shadow: none;"><i class="fas fa-random"></i> RANDOM TEST</button>
     </div>
-
     <div id="results-section" style="display:none;">
       <div id="loading-card" class="card glass-panel" style="display:none; text-align:center; padding:40px;">
         <i class="fas fa-circle-notch fa-spin" style="font-size: 40px; color: var(--gold-mid); margin-bottom: 15px;"></i>
         <p style="color:#aaa; font-size:0.9rem; font-weight:600; letter-spacing: 1px;">DECRYPTING QUANTUM DATA...</p>
       </div>
-
       <div id="results-content" style="display:none;">
         <div class="result-item"><div style="font-size:1.1rem;font-weight:800;color:#ff3366;letter-spacing:1px;">📈 OVER (TÀI)</div><div class="big-percent" id="tai-value">50.0%</div><div class="progress-bar-bg"><div class="progress-fill" id="tai-bar" style="width:50%; background: #ff3366;"></div></div></div>
         <div class="result-item"><div style="font-size:1.1rem;font-weight:800;color:#00e5ff;letter-spacing:1px;">📉 UNDER (XỈU)</div><div class="big-percent" id="xiu-value">50.0%</div><div class="progress-bar-bg"><div class="progress-fill" id="xiu-bar" style="width:50%; background: #00e5ff;"></div></div></div>
@@ -169,21 +160,20 @@
     <h3 style="color:var(--gold-mid); margin-bottom:20px; font-family:'Playfair Display'; font-size:1.3rem;"><i class="fas fa-book-open"></i> DECRYPT LOGS</h3>
     <div id="history-list"><p style="color:#555; font-size:0.85rem; text-align:center;">No records found.</p></div>
   </div>
-</div>
-<script>
-// 1. PARTICLES (BỤI VÀNG LUXURY)
+     <script>
+// PARTICLES
 const canvas = document.getElementById('particles'); const ctx = canvas.getContext('2d'); canvas.width = window.innerWidth; canvas.height = window.innerHeight;
 let particles = []; class Particle { constructor() { this.reset(); } reset() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.size = Math.random() * 2 + 0.5; this.speed = Math.random() * 0.3 + 0.1; this.alpha = Math.random() * 0.5 + 0.1; } update() { this.y -= this.speed; if (this.y < 0) this.reset(); } draw() { ctx.fillStyle = `rgba(212, 175, 55, ${this.alpha})`; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill(); } }
 for(let i=0;i<80;i++) particles.push(new Particle()); function animateParticles() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p => { p.update(); p.draw(); }); requestAnimationFrame(animateParticles); } window.addEventListener('resize', ()=>{ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }); animateParticles();
 
-// 2. AUTH & ADMIN
+// LOGIN & ADMIN
 let currentUserKey = "";
 async function submitLogin() {
     let keyInput = document.getElementById('login-key').value.trim();
     let msgEl = document.getElementById('login-msg');
     msgEl.innerText = "AUTHENTICATING...";
     try {
-        let res = await fetch('http://127.0.0.1:8080/api/login', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({key: keyInput}) });
+        let res = await fetch('/api/login', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({key: keyInput}) });
         let data = await res.json();
         if(data.status === "success") {
             currentUserKey = keyInput;
@@ -199,12 +189,12 @@ async function adminAction(actionType) {
     let msgBox = document.getElementById('admin-msg');
     if(!target) return msgBox.innerText = "TARGET KEY REQUIRED!";
     try {
-        let res = await fetch('http://127.0.0.1:8080/api/admin', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({admin_key: currentUserKey, target_key: target, action: actionType}) });
+        let res = await fetch('/api/admin', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({admin_key: currentUserKey, target_key: target, action: actionType}) });
         let data = await res.json(); msgBox.innerText = data.msg;
     } catch(e) { msgBox.innerText = "SERVER ERROR!"; }
 }
 
-// MENU TABS
+// TABS
 document.querySelectorAll('.menu-item').forEach(item => {
   item.addEventListener('click', () => {
     document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active')); item.classList.add('active');
@@ -213,37 +203,27 @@ document.querySelectorAll('.menu-item').forEach(item => {
   });
 });
 
-// 3. QUANTUM X AI - LUXURY TUNED
+// MANUAL MD5 AI
 class MD5QuantumX {
   validate(md5) { return /^[a-f0-9]{32}$/i.test(md5); }
   analyze(md5) {
     md5 = md5.toLowerCase(); const hex = [...md5].map(c => parseInt(c,16)); const total = hex.reduce((a,b)=>a+b,0);
-    let tai = 35; let xiu = 35;
-    const delta = total - 240; tai += delta * 0.18; xiu -= delta * 0.18;
+    let tai = 35; let xiu = 35; const delta = total - 240; tai += delta * 0.18; xiu -= delta * 0.18;
     [3,5,7,11,13,79,179].forEach(m => { tai += (total % m > m*0.48) ? 2.1 : -1.4; });
     const big = BigInt('0x' + md5); let bin = big.toString(2).padStart(128,'0');
-    const ones = (bin.match(/1/g)||[]).length; const entropy = Math.abs(ones - 64) / 64;
-    tai += (ones > 64 ? 12 : -12) * (1 - entropy);
-    let mirror = 0; for(let i=0;i<16;i++) mirror += Math.abs(hex[i] - hex[31-i]);
-    if(mirror > 90) tai += 8; else if(mirror < 40) xiu += 9;
-    let streak = 1, maxStreak = 1; for(let i=1;i<32;i++){ if(md5[i]===md5[i-1]) streak++; else {maxStreak=Math.max(maxStreak,streak); streak=1;} }
-    tai += Math.max(maxStreak,streak) * 3.5;
-    let chaos = 0, x = (total % 997) / 997; for(let i=0;i<35;i++){ x = 3.92 * x * (1 - x); chaos += x; }
-    chaos = chaos / 35; tai += chaos * 18; xiu += (1 - chaos) * 18;
-    let neural = 0; for(let i=0;i<hex.length;i+=3){ neural += hex[i]*1.4 + (hex[i+1]||0)*0.8 + (hex[i+2]||0)*0.6; }
-    neural = (neural % 420) / 420; tai += neural * 14;
-    let taiPct = Math.max(8, Math.min(92, (tai / (tai+xiu)) * 100 + (Math.random()*4 - 2)));
-    if(Math.random() > 0.7) taiPct += 3.5; let xiuPct = 100 - taiPct;
-    return { tai: (taiPct).toFixed(1), xiu: (xiuPct).toFixed(1), suggestion: taiPct > xiuPct ? "TÀI (OVER)" : "XỈU (UNDER)",
-      details: { energy: total, entropy: (entropy*100).toFixed(1), mirror: mirror, streak: Math.max(maxStreak,streak), chaos: (chaos*100).toFixed(1), neural: (neural*100).toFixed(1), lc179: (Math.random()*100 + 79).toFixed(1) }
-    };
+    const ones = (bin.match(/1/g)||[]).length; const entropy = Math.abs(ones - 64) / 64; tai += (ones > 64 ? 12 : -12) * (1 - entropy);
+    let mirror = 0; for(let i=0;i<16;i++) mirror += Math.abs(hex[i] - hex[31-i]); if(mirror > 90) tai += 8; else if(mirror < 40) xiu += 9;
+    let streak = 1, maxStreak = 1; for(let i=1;i<32;i++){ if(md5[i]===md5[i-1]) streak++; else {maxStreak=Math.max(maxStreak,streak); streak=1;} } tai += Math.max(maxStreak,streak) * 3.5;
+    let chaos = 0, x = (total % 997) / 997; for(let i=0;i<35;i++){ x = 3.92 * x * (1 - x); chaos += x; } chaos = chaos / 35; tai += chaos * 18; xiu += (1 - chaos) * 18;
+    let neural = 0; for(let i=0;i<hex.length;i+=3){ neural += hex[i]*1.4 + (hex[i+1]||0)*0.8 + (hex[i+2]||0)*0.6; } neural = (neural % 420) / 420; tai += neural * 14;
+    let taiPct = Math.max(8, Math.min(92, (tai / (tai+xiu)) * 100 + (Math.random()*4 - 2))); if(Math.random() > 0.7) taiPct += 3.5; let xiuPct = 100 - taiPct;
+    return { tai: (taiPct).toFixed(1), xiu: (xiuPct).toFixed(1), suggestion: taiPct > xiuPct ? "TÀI (OVER)" : "XỈU (UNDER)", details: { energy: total, entropy: (entropy*100).toFixed(1), mirror: mirror, chaos: (chaos*100).toFixed(1) } };
   }
 }
 
 const ai = new MD5QuantumX(); let historyArr = [];
 document.getElementById('predict-btn').addEventListener('click', () => {
-  let val = document.getElementById('md5-input').value.trim();
-  if (!ai.validate(val)) return alert("INVALID MD5 HASH!"); runManualPrediction(val);
+  let val = document.getElementById('md5-input').value.trim(); if (!ai.validate(val)) return alert("INVALID MD5 HASH!"); runManualPrediction(val);
 });
 document.getElementById('auto-btn').addEventListener('click', () => {
   let randMd5 = ''; const chars = '0123456789abcdef'; for(let i=0;i<32;i++) randMd5 += chars[Math.floor(Math.random()*16)];
@@ -264,8 +244,8 @@ function runManualPrediction(md5) {
   }, 1000);
 }
 
-// 4. AUTO API SYNC
-let autoInterval, activeGame = "", phienCu = "";
+// AUTO API & 20s DELAY
+let autoInterval, activeGame = "", phienCu = "", isAnalyzing = false;
 function clearUI() {
     document.getElementById('auto-advice').innerText = "SYNCING..."; document.getElementById('big-advice').innerText = "SYNCING...";
     document.getElementById('auto-phien').innerText = "..."; document.getElementById('big-phien').innerText = "...";
@@ -275,8 +255,9 @@ function clearUI() {
 }
 
 async function loopAuto() {
+    if (isAnalyzing) return; 
     try {
-        let req = await fetch(`http://127.0.0.1:8080/api/scan?tool=${activeGame}&key=${currentUserKey}`);
+        let req = await fetch(`/api/scan?tool=${activeGame}&key=${currentUserKey}`);
         let json = await req.json();
         if(json.status === "auth_error") {
             closeGame(); document.getElementById('main-tool').style.display = "none"; document.getElementById('login-screen').style.display = "flex";
@@ -284,25 +265,42 @@ async function loopAuto() {
         }
         let res = json.data;
         if(res && res.phien !== phienCu) {
-            phienCu = res.phien;
+            isAnalyzing = true; phienCu = res.phien;
             if(res.type === "md5") {
                 let q_res = ai.analyze(res.md5_str);
                 res.du_doan = q_res.suggestion.replace(" (OVER)", "").replace(" (UNDER)", "");
                 res.ti_le = Math.max(q_res.tai, q_res.xiu); res.loi_khuyen = "QUANTUM LUXURY AI";
             }
-            let isTai = res.du_doan.includes("TÀI") || res.du_doan.includes("CHẴN"); let colorClass = isTai ? "txtai" : "txxiu";
-            document.getElementById('auto-phien').innerText = res.phien; document.getElementById('auto-advice').innerText = res.loi_khuyen;
-            let b1 = document.getElementById('auto-big'); b1.innerText = res.du_doan; b1.className = "txbig " + colorClass;
-            document.getElementById('auto-bar').style.width = res.ti_le + "%"; document.getElementById('auto-bar').style.background = isTai ? "#ff3366" : "#00e5ff"; document.getElementById('auto-pct').innerText = res.ti_le + "%";
-            document.getElementById('big-phien').innerText = res.phien; document.getElementById('big-advice').innerText = res.loi_khuyen;
-            let b2 = document.getElementById('big-result'); b2.innerText = res.du_doan; b2.className = "txbig " + colorClass;
-            document.getElementById('big-bar').style.width = res.ti_le + "%"; document.getElementById('big-bar').style.background = isTai ? "#ff3366" : "#00e5ff"; document.getElementById('big-pct-text').innerText = res.ti_le + "%";
+            let isTai = res.du_doan.includes("TÀI") || res.du_doan.includes("CHẴN"); let colorClass = isTai ? "txtai" : "txxiu"; let colorHex = isTai ? "#ff3366" : "#00e5ff";
+            
+            document.getElementById('auto-phien').innerText = res.phien; document.getElementById('big-phien').innerText = res.phien;
+            
+            let countdown = 20;
+            document.getElementById('auto-big').innerText = "WAIT"; document.getElementById('big-result').innerText = "ANALYZING..."; document.getElementById('big-result').className = "txbig glow-text";
+            document.getElementById('auto-bar').style.width = "0%"; document.getElementById('big-bar').style.width = "0%";
+            document.getElementById('auto-pct').innerText = "0%"; document.getElementById('big-pct-text').innerText = "0%";
+
+            let timerInterval = setInterval(() => {
+                document.getElementById('auto-advice').innerText = `QUANTUM ENGINE: ${countdown}s`;
+                document.getElementById('big-advice').innerText = `MONTE CARLO SIMULATION: ${countdown}s...`;
+                countdown--;
+                if (countdown < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('auto-advice').innerText = res.loi_khuyen;
+                    let b1 = document.getElementById('auto-big'); b1.innerText = res.du_doan; b1.className = "txbig " + colorClass;
+                    document.getElementById('auto-bar').style.width = res.ti_le + "%"; document.getElementById('auto-bar').style.background = colorHex; document.getElementById('auto-pct').innerText = res.ti_le + "%";
+                    document.getElementById('big-advice').innerText = res.loi_khuyen;
+                    let b2 = document.getElementById('big-result'); b2.innerText = res.du_doan; b2.className = "txbig " + colorClass;
+                    document.getElementById('big-bar').style.width = res.ti_le + "%"; document.getElementById('big-bar').style.background = colorHex; document.getElementById('big-pct-text').innerText = res.ti_le + "%";
+                    isAnalyzing = false;
+                }
+            }, 1000);
         }
     } catch(e) {}
 }
 
 function startAutoAPI(tool, url) {
-    document.getElementById('game-overlay').style.display = "block"; clearInterval(autoInterval); phienCu = ""; activeGame = tool; clearUI();
+    document.getElementById('game-overlay').style.display = "block"; clearInterval(autoInterval); phienCu = ""; activeGame = tool; clearUI(); isAnalyzing = false;
     if(tool.includes('sunwin') || tool.includes('hitclub')) {
         document.getElementById('game-frame').style.display = "none"; document.getElementById('game-frame').src = "";
         document.getElementById('game-overlay').style.background = "radial-gradient(circle, #0a0a0a 0%, #000 100%)";
@@ -312,9 +310,9 @@ function startAutoAPI(tool, url) {
         document.getElementById('game-overlay').style.background = "#000";
         document.getElementById('bridge-detect-panel').style.display = "block"; document.getElementById('big-center-panel').style.display = "none";
     }
-    loopAuto(); autoInterval = setInterval(loopAuto, 3000); 
+    loopAuto(); autoInterval = setInterval(loopAuto, 2000); 
 }
-function closeGame() { clearInterval(autoInterval); document.getElementById('game-overlay').style.display = 'none'; document.getElementById('game-frame').src = ''; }
+function closeGame() { clearInterval(autoInterval); isAnalyzing = false; document.getElementById('game-overlay').style.display = 'none'; document.getElementById('game-frame').src = ''; }
 function makeDraggable(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0; var header = document.getElementById(elmnt.id + "-header");
     if (header) { header.onmousedown = dragStart; header.ontouchstart = dragStart; header.style.cursor = "grab"; } else { elmnt.onmousedown = dragStart; elmnt.ontouchstart = dragStart; }
@@ -326,3 +324,4 @@ makeDraggable(document.getElementById("bridge-detect-panel"));
 </script>
 </body>
 </html>
+    
